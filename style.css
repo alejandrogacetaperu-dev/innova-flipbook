@@ -1,0 +1,311 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf1f6;
+    color: #263449;
+    min-height: 100vh;
+}
+
+.header {
+    background: #172b46;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    background: #e4a83d;
+    color: #172b46;
+    font-size: 30px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+}
+
+.brand h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.brand h1 span {
+    color: #e4a83d;
+}
+
+.brand p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    color: #cbd5e1;
+}
+
+.version {
+    font-size: 12px;
+    color: #e4a83d;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.upload-panel {
+    background: white;
+    max-width: 700px;
+    margin: 45px auto;
+    padding: 55px 25px;
+    text-align: center;
+    border: 2px dashed #b8c5d5;
+    border-radius: 15px;
+}
+
+.upload-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.upload-panel h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.upload-panel p {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+#pdfFile {
+    display: none;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #d99a2b;
+    color: #172b46;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background: #efb94f;
+}
+
+.file-info {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.reader-section {
+    display: none;
+}
+
+.reader-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.reader-heading h2 {
+    font-size: 22px;
+}
+
+.reader-heading p {
+    color: #718096;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.secondary-button {
+    padding: 10px 18px;
+    border: 1px solid #172b46;
+    border-radius: 6px;
+    color: #172b46;
+    background: white;
+    cursor: pointer;
+}
+
+.book-area {
+    background: #d8e0e9;
+    padding: 30px 10px;
+    border-radius: 12px;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#book {
+    margin: auto;
+}
+
+.page {
+    background: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.toolbar button {
+    background: #172b46;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    min-width: 42px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.toolbar button:hover {
+    background: #d99a2b;
+    color: #172b46;
+}
+
+#pageCounter {
+    font-weight: bold;
+    min-width: 65px;
+    text-align: center;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+.spinner {
+    width: 38px;
+    height: 38px;
+    border: 4px solid #d3dce8;
+    border-top-color: #d99a2b;
+    border-radius: 50%;
+    margin: auto auto 12px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.message {
+    text-align: center;
+    color: #b42318;
+    margin: 15px;
+    font-size: 14px;
+}
+
+footer {
+    background: #172b46;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 14px;
+    }
+
+    .brand h1 {
+        font-size: 17px;
+    }
+
+    .brand p {
+        font-size: 8px;
+    }
+
+    .version {
+        font-size: 10px;
+    }
+
+    .container {
+        padding: 20px 8px;
+    }
+
+    .upload-panel {
+        padding: 35px 15px;
+    }
+
+    .upload-panel h2 {
+        font-size: 19px;
+    }
+
+    .reader-heading h2 {
+        font-size: 17px;
+    }
+
+    .book-area {
+        padding: 12px 0;
+        min-height: 300px;
+    }
+
+    .toolbar {
+        gap: 7px;
+    }
+
+    .toolbar button {
+        min-width: 36px;
+        height: 36px;
+    }
+}
+.reader-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reader-actions a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.reader-actions a:hover {
+    background: #e4a83d;
+}
+
+@media (max-width: 600px) {
+    .reader-actions {
+        width: 100%;
+    }
+}

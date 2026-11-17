@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVA FLIPBOOK</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <!-- Biblioteca de efecto de pasar páginas -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="brand">
+            <span class="brand-icon">I</span>
+            <div>
+                <h1>INNOVA <span>FLIPBOOK</span></h1>
+                <p>CONVERTIDOR DE REVISTAS DIGITALES</p>
+            </div>
+        </div>
+        <span class="version">VERSIÓN 1.0</span>
+    </header>
+
+    <main class="container">
+
+        <section class="upload-panel" id="uploadPanel">
+            <div class="upload-icon">📖</div>
+            <h2>Transforma tu PDF en una revista digital</h2>
+            <p>Selecciona un archivo PDF desde tu computadora.</p>
+
+            <label for="pdfFile" class="upload-button">
+                Seleccionar PDF
+            </label>
+
+            <input type="file" id="pdfFile" accept=".pdf,application/pdf">
+
+            <p class="file-info" id="fileInfo">
+                Ningún archivo seleccionado
+            </p>
+        </section>
+
+        <section class="reader-section" id="readerSection">
+
+            <div class="reader-heading">
+                <div>
+                    <h2 id="documentTitle">Mi revista digital</h2>
+                    <p id="pageStatus">Preparando revista...</p>
+                </div>
+                <div class="reader-actions">
+
+                    <a id="downloadPdf"
+                    class="secondary-button"
+                    href="#"
+                    download>
+                    ⬇ Descargar PDF
+                    </a>
+
+                    <button id="changeFile" class="secondary-button">
+                        Cambiar PDF
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="book-area">
+                <div id="book"></div>
+            </div>
+
+            <div class="toolbar">
+                <button id="firstPage" title="Primera página">|◀</button>
+                <button id="prevPage" title="Anterior">◀</button>
+
+                <span id="pageCounter">0 / 0</span>
+
+                <button id="nextPage" title="Siguiente">▶</button>
+                <button id="lastPage" title="Última página">▶|</button>
+                <button id="fullscreen" title="Pantalla completa">⛶</button>
+            </div>
+
+        </section>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p id="loadingText">Procesando documento...</p>
+        </div>
+
+        <div class="message" id="message"></div>
+
+    </main>
+
+    <footer>
+        <p>INNOVA FLIPBOOK © 2026 | Tecnología para publicaciones digitales</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
